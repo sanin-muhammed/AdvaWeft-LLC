@@ -45,12 +45,17 @@ header div {
     gap: 25px;
 }
 .navbar {
+    height: 80px;
+    z-index: 999;
     background: #000;
     color: #fff;
     display: flex;
     justify-content: space-around;
     padding: 0;
     margin: 0;
+}
+.navbar_container{
+    padding: 0 50px;
 }
 .navbar .brand {
     display: flex;
@@ -335,6 +340,9 @@ header div {
     }
 }
 @media (max-width: 576px) {
+    .navbar_container{
+        padding: 0 10px;
+    }
     .brand {
         gap: 7px;
     }
