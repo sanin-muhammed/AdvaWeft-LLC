@@ -48,6 +48,8 @@ header a {
     gap: 25px;
 }
 .navbar {
+    position: sticky;
+    top: 0;
     height: 80px;
     z-index: 999;
     background: #000;
@@ -255,6 +257,9 @@ header a {
     display: flex;
     align-items: center;
     overflow-y: scroll;
+}
+.yellow_div::-webkit-scrollbar{
+    display: none;
 }
 .yellow_div div {
     font-weight: 500;
