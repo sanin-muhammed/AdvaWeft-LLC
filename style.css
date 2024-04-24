@@ -27,7 +27,10 @@ header {
     align-items: center;
     padding: 13px 0;
 }
-header div {
+header div,
+header a {
+    text-decoration: none;
+    color: #000;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -54,18 +57,19 @@ header div {
     padding: 0;
     margin: 0;
 }
-.navbar_container{
+.navbar_container {
     padding: 0 50px;
 }
-.navbar .brand {
+.brand {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     margin: 0;
     transition: 0.3s ease-in-out;
+    text-decoration: none;
 }
-.navbar .brand img {
+.brand img {
     width: 120px;
     height: 25px;
     padding: 0;
@@ -180,6 +184,11 @@ header div {
     flex-direction: column;
     gap: 10px;
 }
+.about_2 h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
 
 .services_page {
     display: flex;
@@ -196,7 +205,7 @@ header div {
 }
 
 .service {
-    height: 350px ;
+    height: 350px;
 
     position: relative;
     padding: 40px;
@@ -236,6 +245,90 @@ header div {
 }
 .service:hover .service_arrow {
     transform: rotate(0);
+}
+
+.yellow_div {
+    height: 300px;
+    background: #f1b749;
+    /* padding: 60px 0; */
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    overflow-y: scroll;
+}
+.yellow_div div {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+footer {
+    color: #fff;
+}
+
+.footer_contaner {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+.foot_1 {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.foot_1 p {
+    font-size: 14px;
+}
+.foot_2 {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer_icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer_icons a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer_icons a i {
+    font-size: 23px;
+}
+.legal-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+.legal-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    padding: 10px 20px;
+    background: #aeaeae1f;
+}
+.legal-info a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 15px;
+}
+
+.legal-info a:hover {
+    color: #dedede;
 }
 
 @media (max-width: 992px) {
@@ -336,11 +429,35 @@ header div {
         font-size: 21px;
     }
     .service p {
-        padding-top: 5px ;
+        padding-top: 5px;
+    }
+    .yellow_div {
+        height: 200px;
+    }
+    .yellow_div div {
+        font-weight: 500;
+        gap: 10px;
+        letter-spacing: normal;
+        word-spacing: 2px;
+        font-size: 15px;
+    }
+
+    .footer_contaner {
+        padding: 30px 15px;
+        flex-direction: column;
+        justify-content: start;
+        gap: 30px;
+        align-items: start;
+    }
+    .footer_contaner div {
+        width: 100%;
+    }
+    .foot_1 p {
+        word-spacing: 3px;
     }
 }
 @media (max-width: 576px) {
-    .navbar_container{
+    .navbar_container {
         padding: 0 10px;
     }
     .brand {
@@ -373,7 +490,7 @@ header div {
     .about_page {
         padding: 30px 20px;
     }
-    .about_page h1{
+    .about_page h1 {
         font-size: 19px;
         font-weight: bold;
     }
@@ -398,7 +515,7 @@ header div {
         font-size: 17px;
         font-weight: bold;
     }
-    .services_page h1{
+    .services_page h1 {
         font-size: 18px;
         font-weight: bold;
     }
@@ -406,7 +523,7 @@ header div {
         padding: 20px;
         gap: 20px;
     }
-    .service{
+    .service {
         padding: 15px;
     }
     .service_arrow {
