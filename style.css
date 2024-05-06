@@ -211,6 +211,7 @@ header a {
     padding: 70px;
     z-index: -1;
     background: #fff;
+    background: #ee8f2a;
 }
 .about_page .about_section {
     display: grid;
