@@ -308,8 +308,8 @@ header a {
 
 .yellow_div {
     height: 300px;
-    background: #f1b749;
-    /* padding: 60px 0; */
+    background: #ee8f2a;
+    
     transition: 0.3s ease-in-out;
     display: flex;
     align-items: center;
