@@ -62,7 +62,6 @@ header a {
     justify-content: space-around;
     padding: 0;
     margin: 0;
-
 }
 .navbar_container {
     padding: 0 50px;
@@ -82,8 +81,7 @@ header a {
     padding: 0;
     margin: 0;
     transition: 0.3s ease-in-out;
-    animation: opacityAnimation  1s ease-in-out;
-    
+    animation: opacityAnimation 1s ease-in-out;
 }
 
 .nav-item a {
@@ -111,13 +109,11 @@ header a {
     font-size: 35px;
     color: #ef7c00;
     margin: 0;
-    animation: widthAnimation .5s ease-in-out,opacityAnimation .5s ease-in-out;
-
+    animation: widthAnimation 0.5s ease-in-out, opacityAnimation 0.5s ease-in-out;
 }
 .arabic_logo span {
     color: #004e9f;
     animation: opacityAnimation 1.3s ease-in-out;
-
 }
 .home_page {
     width: 100%;
@@ -151,6 +147,33 @@ header a {
 .homepage_heading {
     color: #f7c348;
     font-weight: bold;
+}
+.anim_text{
+    /* width: 100% ; */
+    background: red;
+    white-space: nowrap;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation: typing 4s steps(22, end) forwards, blink 1s infinite;
+}
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100% ;
+    }
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        border-right: 2px solid transparent;
+    }
+
+    50% {
+        border-right: 2px solid #fff;
+    }
 }
 .whatsapp_btn {
     background: #ee8f2a;
@@ -353,65 +376,75 @@ footer {
 .legal-info a:hover {
     color: #dedede;
 }
-.service_container_section{
+.service_container_section {
     height: 650px;
     display: flex;
     align-items: center !important;
     justify-content: center;
-
-
 }
-.service_container{
-    overflow: hidden  ;
+.service_container {
+    overflow: hidden;
     border-radius: 20px;
     height: 500px;
     width: 90%;
     display: grid;
-    gap: 30px;
-    grid-template-columns: .9fr  1fr;
+    gap: 10px;
+    grid-template-columns: 0.9fr 1fr;
     background: #007bff;
     color: #fff;
     padding: 0;
 }
-.service_container img{
+.service_container img {
     height: 500px;
 }
-.service_details{
-    padding: 40px 20px;
+.service_details {
+    padding: 40px  ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: opacityAnimation 1s ease-in-out;
+}
+.service_details h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+.service_para{
+    height: 340px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    animation: opacityAnimation 1s ease-in-out;
-
-
+    overflow-y: scroll !important;
+    /* background: rgba(255, 0, 0, 0.225); */
 }
-.service_details h1{
-    font-size: 2em;
-    font-weight: bold;
-    padding-bottom: 10px;
+.service_para::-webkit-scrollbar{
+    display: none;
 }
-.service_details p{
+.service_details p {
     font-weight: 500;
     word-spacing: 3px;
-    animation: widthAnimation .5s ease-in-out;
-
+    animation: widthAnimation 0.5s ease-in-out;
 }
 @keyframes widthAnimation {
-    0%{
+    0% {
         width: 0%;
-    }100%{
+    }
+    100% {
         width: 100%;
     }
 }
 @keyframes opacityAnimation {
-    0%{
-        opacity: 0 ;
-    }100%{
-        opacity: 1 ;
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
 @media (max-width: 992px) {
+    .navbar{
+        top: 0;
+    }
     header {
         display: none;
     }
@@ -470,6 +503,19 @@ footer {
     }
     .service p {
         padding-top: 10px;
+    }
+    .service_container_section{
+        height: 100%;
+        padding: 50px 0;
+    }
+    .service_container {
+        border-radius: 15px;
+        height: 100%;
+        gap: 0;
+        grid-template-columns:1fr;
+    }
+    .service_container img {
+        height:100%;
     }
 }
 
@@ -535,6 +581,15 @@ footer {
     .foot_1 p {
         word-spacing: 3px;
     }
+    
+    .service_container {
+        border-radius: 10px;
+    }
+    .service_details{
+        padding:30px 20px;
+        gap: 10px;
+    }
+    
 }
 @media (max-width: 576px) {
     .navbar_container {
@@ -614,5 +669,17 @@ footer {
     }
     .service p {
         font-size: 14px;
+    }
+    .service_details h1{ 
+        font-size: 20px;
+
+    }
+    .service_details p {
+        font-weight: 500;
+        word-spacing: 1px;
+        font-size: 14px;
+    }
+    .service_para{
+        height: 210px;
     }
 }
