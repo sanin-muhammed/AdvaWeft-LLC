@@ -115,10 +115,16 @@ header a {
     color: #004e9f;
     animation: opacityAnimation 1.3s ease-in-out;
 }
+.homepage_container{
+    position: sticky;
+    top: 60px;
+    z-index: -2;
+}
 .home_page {
     width: 100%;
     height: 90vh;
     position: relative;
+    
 }
 .home_page img {
     position: relative;
@@ -196,11 +202,15 @@ header a {
 }
 
 .about_page {
+    top: 60px;
+    position: sticky;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     padding: 70px;
+    z-index: -1;
+    background: #fff;
 }
 .about_page .about_section {
     display: grid;
@@ -241,6 +251,8 @@ header a {
     flex-direction: column;
     gap: 30px;
     align-items: center;
+    z-index: 999;
+    background: #fff;
 }
 .service_section {
     display: grid;
@@ -419,7 +431,7 @@ footer {
     flex-direction: column;
     gap: 10px;
     overflow-y: scroll ;
-    background: rgba(255, 0, 0, 0.225);
+    /* background: rgba(255, 0, 0, 0.225); */
 }
 .service_para::-webkit-scrollbar{
     display: none;
