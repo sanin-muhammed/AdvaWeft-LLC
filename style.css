@@ -418,8 +418,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow-y: scroll !important;
-    /* background: rgba(255, 0, 0, 0.225); */
+    overflow-y: scroll ;
+    background: rgba(255, 0, 0, 0.225);
 }
 .service_para::-webkit-scrollbar{
     display: none;
