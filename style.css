@@ -145,8 +145,13 @@ header a {
     padding: 20px;
 }
 .homepage_heading {
+    display: flex;
+    flex-direction: column;
     color: #f7c348;
     font-weight: bold;
+}
+.homepage_heading span{
+    text-wrap: none;
 }
 .anim_text{
     /* width: 100% ; */
